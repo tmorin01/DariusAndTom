@@ -711,7 +711,7 @@ p {
       height: 900px; } }
   @media (max-width: 767px) {
     .single_slider {
-      height: 600px; } }
+      height: 900px; } }
   .single_slider::before {
     position: absolute;
     content: '';
