@@ -963,7 +963,7 @@ p {
       @media (max-width: 767px) {
         .slider_content p img {
           width: 40px; } }
-  }
+
 
 .slider-active .slick-dots {
   position: absolute;
