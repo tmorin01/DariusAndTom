@@ -39,6 +39,10 @@ body {
 img {
   max-width: 100%; }
 
+main{
+  display: none;
+}
+
 a:focus,
 input:focus,
 textarea:focus,
@@ -946,6 +950,20 @@ p {
       @media (max-width: 767px) {
         .slider_content p img {
           width: 40px; } }
+  .slider_image {
+    margin-top: 100px; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .slider_image {
+        font-size: 20px; } }
+    @media (max-width: 767px) {
+      .slider_content p {
+        font-size: 16px; } }
+    .slider_content p img {
+      display: inline-block; }
+      @media (max-width: 767px) {
+        .slider_content p img {
+          width: 40px; } }
+  }
 
 .slider-active .slick-dots {
   position: absolute;
