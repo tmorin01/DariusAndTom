@@ -103,7 +103,7 @@
         </div> <!-- header navbar -->
 
         <div id="home" class="header_slider slider-active">
-            <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(assets/images/slider-1.jpg)">
+            <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(assets/images/slider-1.jpg); position: relative;">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
@@ -117,6 +117,34 @@
                         </div>
                     </div> <!-- row -->
                 </div> <!-- container -->
+
+                <!-- RSVP & Hotel Slide-Up Drawer -->
+                <div id="notice-drawer" style="position:fixed;bottom:0;left:0;right:0;z-index:1000;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);">
+
+                    <button id="drawer-toggle" onclick="toggleDrawer()" aria-label="Toggle notices" style="display:block;margin:0 auto;background:rgba(35,57,105,0.95);border:2px solid #47f4ca;border-bottom:none;border-radius:8px 8px 0 0;color:#47f4ca;padding:6px 22px 4px;cursor:pointer;font-family:'rooney-web',serif;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;line-height:1;width:auto;outline:none;">
+                        <span style="display:inline-block;color:#47f4ca;">Important Dates</span>
+                        <span id="drawer-arrow" style="display:inline-block;margin-left:8px;color:#d9c21c;font-size:14px;transition:transform 0.4s;">&#8964;</span>
+                    </button>
+
+                    <div style="background:rgba(35,57,105,0.95);border-top:2px solid #47f4ca;padding:20px 0;">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-5 col-md-5 text-center" style="padding:8px 24px;border-right:1px solid rgba(71,244,202,0.3);">
+                                    <p style="font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#47f4ca;margin-bottom:10px;">Kindly RSVP by <strong style="color:#d9c21c;">May 1st</strong></p>
+                                    <a href="https://form.jotform.com/260105505556047" rel="noopener noreferrer" target="_blank" class="main-btn" style="padding:0 28px;line-height:40px;font-size:14px;">RSVP</a>
+                                </div>
+                                <div class="col-12 d-md-none" style="height:1px;background:rgba(71,244,202,0.3);margin:12px 0;"></div>
+                                <div class="col-lg-5 col-md-5 text-center" style="padding:8px 24px;">
+                                    <p style="font-size:13px;letter-spacing:0.15em;text-transform:uppercase;color:#47f4ca;margin-bottom:10px;">Hotel block reservations by <strong style="color:#d9c21c;">May 10th</strong></p>
+                                    <a href="https://www.hilton.com/en/attend-my-event/darius-and-tom-wedding/" rel="noopener noreferrer" target="_blank" class="main-btn" style="padding:0 28px;line-height:40px;font-size:14px;">Reserve a Room</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Drawer -->
+
             </div> <!-- single slider -->
         </div> <!-- header slider -->
     </section>
@@ -200,6 +228,19 @@
 
     <!--====== Main js ======-->
     <script src="assets/js/main.js"></script>
+
+    <!--====== Drawer ======-->
+    <style>
+        #notice-drawer.collapsed { transform: translateY(calc(100% - 34px)); }
+        #notice-drawer.collapsed #drawer-arrow { transform: rotate(180deg); }
+        #drawer-toggle { cursor: pointer; }
+        #drawer-toggle:hover { background: rgba(35,57,105,1) !important; }
+    </style>
+    <script>
+        function toggleDrawer() {
+            document.getElementById('notice-drawer').classList.toggle('collapsed');
+        }
+    </script>
 
 </body>
 
